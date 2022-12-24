@@ -6,6 +6,6 @@
     }
     public class MailList
     {
-        public List<GetMails> Data { get; set; }
+        public List<GetMails> Data { get; set; }  
     }
 }
