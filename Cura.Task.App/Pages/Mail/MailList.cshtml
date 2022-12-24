@@ -1,0 +1,46 @@
+﻿@page
+@model Cura.Task.App.Pages.Mail.MailListModel
+@{
+
+    <form class="mx-1 mx-md-4" method="post">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" style="visibility:hidden"></th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.lstmessages.Count > 0)
+                    {
+                        @foreach (var item in Model.lstmessages)
+                        {
+                            <tr>
+                                <td style="visibility:hidden">@item.Id</td>
+                                <td>@item.Subject</td>
+                                <td>@item.body</td>
+                                <td>@item.ReciveTime</td>
+                                <td>@item.HasAttachment</td>
+                                <td>@item.IsStared</td>
+                            </tr>
+                        }
+                    }
+
+
+
+
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+}
